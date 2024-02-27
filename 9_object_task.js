@@ -1,9 +1,11 @@
-       const prompt=require("prompt-sync")({sigint:true});//prompt in terminal
+      //  const prompt=require("prompt-sync")({sigint:true});//prompt in terminal
       // Key - Value Pair
 
       // object
      let person = {
-    "200_Painting_area": 11205.55,
+      190420107514:"Utsav",
+      "Utysav":true,
+    "200_Painting_area": undefined,
     "201_Anodes": 29.98,
     "202_Beam": 46.58,
     "203_Boat_Landing_Fenders_Rub_Strips": 5.97,
@@ -641,11 +643,18 @@
     //   }
     // }
 
-   for ( let keys in person){
-    if(keys.startsWith("2")){
-      console.log(keys + " : " + person[keys]);
-    }
-   }
+
+    // for ( let keys in person) {
+    //   console.log(keys)
+    // }
+
+  //  for ( let keys in person){
+  //   if(keys.startsWith("2")){
+  //     console.log(keys + " : " + person[keys]);
+  //   }
+  //  }
+
+
 
       // 3. Get all the Keys starting from 1 :-
  
@@ -669,31 +678,90 @@
 
      
 
+//this is wrong this will not work for finding numeric keys...
+      // for (const key in person) {
+      //   if(typeof(key) === "number"){
+      //     console.log(key+ ": ")
+      //   }
+      // }
 
+      // this is working ...
       // for (const key in person) {
       //   if(typeof(person[key]) === "number"){
-      //     console.log(key+ ": "+person[key])
+      //     console.log(key+ ": " + person[key])
       //   }
       // }
       
 
 
-      //  4. Get all falsy values from Object
+       // 4. Get all strings from the Object :-
 
-      // for (const key in person) {
-      //   if (typeof (person[key]) === "boolean") {
-      //     console.log(`${key}: ${person[key]} is a boolean.`);
-      //   } 
-      //   else if(typeof(person[key]) === null){
-      //     console.log(`${key}: ${person[key]} is a Null.`);
-      //   }
-      //   else if(typeof(person[key]) === undefined){
-      //     console.log(`${key}: ${person[key]} is a Undefined.`);
-      //   }
-      //   else {
-      //     console.log("hello");
+      //  for (const key in person) {
+      //   if(typeof(person[key]) === "string"){
+      //     console.log(key+ ": " + person[key])
       //   }
       // }
+
+             // 4. Get all booleans from the Object :-
+
+            
+            // for (const key in person) {
+            //   if (typeof person[key] === "boolean") {
+            //     console.log(key + ": " + person[key]);
+            //   }
+            // }
+
+            // 4. Get all undefined from the Object :-
+            // for (const key in person) {
+            //   if (typeof person[key] === "undefined") {
+            //     console.log(key + ": " + person[key]);
+            //   }
+            // }
+
+            // 4. Get all null from the Object :-
+            // for (const key in person) {
+            //   if (person[key] === null) {
+            //     console.log(key + ": " + person[key]);
+            //   }
+            // }
+
+
+            //get all falsy value in the object...
+
+            //  for( let key in person){
+            //   if (typeof person[key] === "boolean") {
+            //     console.log(key + ": " + person[key]);
+            //   }
+            //    if (typeof person[key] === "undefined") {
+            //     console.log(key + ": " + person[key]);
+            //   }
+            //     if  (person[key] === null) {
+            //     console.log(key + ": " + person[key]);
+            //   }
+            // }
+
+
+
+            // 6. Get all LOW values from Object
+
+            // for ( let keys in person ){
+            //   if ( person[keys] == "LOW")
+            //   console.log(keys + ": " + person[keys]);
+            // }
+
+
+
+
+            // 7. Get all values which has space in it
+
+    
+
+            for (let key in person) {
+              if (typeof person[key] === "string" && person[key].includes(" ")) {
+                console.log(key + " : " + person[key]);
+              }
+            }
+
 
 
 
